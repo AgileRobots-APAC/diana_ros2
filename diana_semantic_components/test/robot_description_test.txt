@@ -1,0 +1,491 @@
+<?xml version="1.0" ?>
+<robot name="diana3">
+  <link name="diana3_link0">
+    <visual name="diana3_link0_visual">
+      <geometry>
+        <mesh filename="package://diana_description/meshes/robots/diana3/visual/link0.stl"/>
+      </geometry>
+    </visual>
+    <collision name="diana3_link0_collision">
+      <geometry>
+        <mesh filename="package://diana_description/meshes/robots/diana3/collision/link0.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  <!-- sub-link defining detailed meshes for collision with environment -->
+  <link name="diana3_link1">
+    <visual name="diana3_link1_visual">
+      <geometry>
+        <mesh filename="package://diana_description/meshes/robots/diana3/visual/link1.stl"/>
+      </geometry>
+    </visual>
+    <collision name="diana3_link1_collision">
+      <geometry>
+        <mesh filename="package://diana_description/meshes/robots/diana3/collision/link1.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.000053 0.005277 -0.028580"/>
+      <mass value="3.066619"/>
+      <inertia ixx="0.0138" ixy="1.1e-05" ixz="4e-06" iyy="0.012476" iyz="0.000143" izz="0.005722"/>
+    </inertial>
+  </link>
+  <joint name="diana3_joint1" type="revolute">
+    <origin rpy="0 0 0" xyz="0 0 0.252"/>
+    <parent link="diana3_link0"/>
+    <child link="diana3_link1"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="75.0" lower="-3.12413936107" upper="3.12413936107" velocity="3.054326191"/>
+    <safety_controller k_position="100.0" k_velocity="40.0" soft_lower_limit="-3.12413936107" soft_upper_limit="3.12413936107"/>
+    <position_based_velocity_limits deceleration_limit="6.0" velocity_offset="0.3"/>
+    <dynamics D="1" K="7000" damping="0.003" friction="0.0" gear_ratio="120.0" motor_inertia="4.206399e-05" mu_coulomb="0" mu_viscous="16"/>
+  </joint>
+  <!-- sub-link defining detailed meshes for collision with environment -->
+  <link name="diana3_link2">
+    <visual name="diana3_link2_visual">
+      <geometry>
+        <mesh filename="package://diana_description/meshes/robots/diana3/visual/link2.stl"/>
+      </geometry>
+    </visual>
+    <collision name="diana3_link2_collision">
+      <geometry>
+        <mesh filename="package://diana_description/meshes/robots/diana3/collision/link2.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.02183085 -0.0877176 -0.028178"/>
+      <mass value="2.002058"/>
+      <inertia ixx="0.012715" ixy="0.0" ixz="0.0" iyy="0.005807" iyz="-0.000234" izz="0.010379"/>
+    </inertial>
+  </link>
+  <joint name="diana3_joint2" type="revolute">
+    <origin rpy="-1.570796326794897 0 0" xyz="0 0 0"/>
+    <parent link="diana3_link1"/>
+    <child link="diana3_link2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="86.0" lower="-1.5707963268" upper="1.5707963268" velocity="3.054326191"/>
+    <safety_controller k_position="100.0" k_velocity="40.0" soft_lower_limit="-1.5707963268" soft_upper_limit="1.5707963268"/>
+    <position_based_velocity_limits deceleration_limit="2.585" velocity_offset="0.2"/>
+    <dynamics D="1" K="7000" damping="0.003" friction="0.0" gear_ratio="120.0" motor_inertia="4.206399e-05" mu_coulomb="0" mu_viscous="16"/>
+  </joint>
+  <!-- sub-link defining detailed meshes for collision with environment -->
+  <link name="diana3_link3">
+    <visual name="diana3_link3_visual">
+      <geometry>
+        <mesh filename="package://diana_description/meshes/robots/diana3/visual/link3.stl"/>
+      </geometry>
+    </visual>
+    <collision name="diana3_link3_collision">
+      <geometry>
+        <mesh filename="package://diana_description/meshes/robots/diana3/collision/link3.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.02245792 0.001761461 -0.118137"/>
+      <mass value="3.507224"/>
+      <inertia ixx="0.097569" ixy="-0.000183" ixz="-0.000552" iyy="0.100674" iyz="-2e-06" izz="0.009781"/>
+    </inertial>
+  </link>
+  <joint name="diana3_joint3" type="revolute">
+    <origin rpy="1.570796326794897 0 0" xyz="0 -0.384 0"/>
+    <parent link="diana3_link2"/>
+    <child link="diana3_link3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="52.0" lower="-3.12413936107" upper="3.12413936107" velocity="3.054326191"/>
+    <safety_controller k_position="100.0" k_velocity="40.0" soft_lower_limit="-3.12413936107" soft_upper_limit="3.12413936107"/>
+    <position_based_velocity_limits deceleration_limit="3.5" velocity_offset="0.2"/>
+    <dynamics D="1" K="7000" damping="0.003" friction="0.0" gear_ratio="120.0" motor_inertia="3.211626e-05" mu_coulomb="0" mu_viscous="16"/>
+  </joint>
+  <!-- sub-link defining detailed meshes for collision with environment -->
+  <link name="diana3_link4">
+    <visual name="diana3_link4_visual">
+      <geometry>
+        <mesh filename="package://diana_description/meshes/robots/diana3/visual/link4.stl"/>
+      </geometry>
+    </visual>
+    <collision name="diana3_link4_collision">
+      <geometry>
+        <mesh filename="package://diana_description/meshes/robots/diana3/collision/link4.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.01936869 -0.05952297 -0.027365"/>
+      <mass value="1.500792"/>
+      <inertia ixx="0.006921" ixy="-0.001999" ixz="-8.6e-05" iyy="0.005192" iyz="-5.2e-05" izz="0.006469"/>
+    </inertial>
+  </link>
+  <joint name="diana3_joint4" type="revolute">
+    <origin rpy="-1.570796326794897 0 0" xyz="0.05435 0 0"/>
+    <parent link="diana3_link3"/>
+    <child link="diana3_link4"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="52.0" lower="0.0" upper="3.05432619099" velocity="3.054326191"/>
+    <safety_controller k_position="100.0" k_velocity="40.0" soft_lower_limit="0.0" soft_upper_limit="3.05432619099"/>
+    <position_based_velocity_limits deceleration_limit="4.0" velocity_offset="0.3"/>
+    <dynamics D="1" K="7000" damping="0.003" friction="0.0" gear_ratio="120.0" motor_inertia="3.211626e-05" mu_coulomb="0" mu_viscous="16"/>
+  </joint>
+  <!-- sub-link defining detailed meshes for collision with environment -->
+  <link name="diana3_link5">
+    <visual name="diana3_link5_visual">
+      <geometry>
+        <mesh filename="package://diana_description/meshes/robots/diana3/visual/link5.stl"/>
+      </geometry>
+    </visual>
+    <collision name="diana3_link5_collision">
+      <geometry>
+        <mesh filename="package://diana_description/meshes/robots/diana3/collision/link5.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.004502 -0.0264996 -0.175898"/>
+      <mass value="1.970006"/>
+      <inertia ixx="0.088884" ixy="-0.00012" ixz="-0.000258" iyy="0.085981" iyz="-0.002793" izz="0.004796"/>
+    </inertial>
+  </link>
+  <joint name="diana3_joint5" type="revolute">
+    <origin rpy="1.570796326794897 0 0" xyz="-0.04415 -0.382 0"/>
+    <parent link="diana3_link4"/>
+    <child link="diana3_link5"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="24.0" lower="-3.12413936107" upper="3.12413936107" velocity="5.3232542186"/>
+    <safety_controller k_position="100.0" k_velocity="40.0" soft_lower_limit="-3.12413936107" soft_upper_limit="3.12413936107"/>
+    <position_based_velocity_limits deceleration_limit="17.0" velocity_offset="0.35"/>
+    <dynamics D="1" K="7000" damping="0.003" friction="0.0" gear_ratio="80.0" motor_inertia="3.211626e-05" mu_coulomb="0" mu_viscous="16"/>
+  </joint>
+  <!-- sub-link defining detailed meshes for collision with environment -->
+  <link name="diana3_link6">
+    <visual name="diana3_link6_visual">
+      <geometry>
+        <mesh filename="package://diana_description/meshes/robots/diana3/visual/link6.stl"/>
+      </geometry>
+    </visual>
+    <collision name="diana3_link6_collision">
+      <geometry>
+        <mesh filename="package://diana_description/meshes/robots/diana3/collision/link6.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.03865218 -0.003196589 0.001997"/>
+      <mass value="2.274588"/>
+      <inertia ixx="0.003526" ixy="-0.000533" ixz="3.2e-05" iyy="0.008928" iyz="8e-06" izz="0.009407"/>
+    </inertial>
+  </link>
+  <joint name="diana3_joint6" type="revolute">
+    <origin rpy="-1.570796326794897 0 0" xyz="0 0 0"/>
+    <parent link="diana3_link5"/>
+    <child link="diana3_link6"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="24.0" lower="-1.745329252" upper="1.745329252" velocity="5.3232542186"/>
+    <safety_controller k_position="100.0" k_velocity="40.0" soft_lower_limit="-1.745329252" soft_upper_limit="1.745329252"/>
+    <position_based_velocity_limits deceleration_limit="5.5" velocity_offset="0.35"/>
+    <dynamics D="1" K="7000" damping="0.003" friction="0.0" gear_ratio="80.0" motor_inertia="3.211626e-05" mu_coulomb="0" mu_viscous="16"/>
+  </joint>
+  <!-- sub-link defining detailed meshes for collision with environment -->
+  <link name="diana3_link7">
+    <visual name="diana3_link7_visual">
+      <geometry>
+        <mesh filename="package://diana_description/meshes/robots/diana3/visual/link7.stl"/>
+      </geometry>
+    </visual>
+    <collision name="diana3_link7_collision">
+      <geometry>
+        <mesh filename="package://diana_description/meshes/robots/diana3/collision/link7.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.0004806127 0.008380903 -0.048894"/>
+      <mass value="0.598725"/>
+      <inertia ixx="0.002257" ixy="0.0" ixz="1.6e-05" iyy="0.002241" iyz="8e-06" izz="0.00051"/>
+    </inertial>
+  </link>
+  <joint name="diana3_joint7" type="revolute">
+    <origin rpy="1.570796326794897 0 0" xyz="-0.075 -0.1243 0"/>
+    <parent link="diana3_link6"/>
+    <child link="diana3_link7"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="24.0" lower="-3.12413936107" upper="3.12413936107" velocity="5.3232542186"/>
+    <safety_controller k_position="100.0" k_velocity="40.0" soft_lower_limit="-3.12413936107" soft_upper_limit="3.12413936107"/>
+    <position_based_velocity_limits deceleration_limit="17.0" velocity_offset="0.35"/>
+    <dynamics D="1" K="7000" damping="0.003" friction="0.0" gear_ratio="80.0" motor_inertia="3.211626e-05" mu_coulomb="0" mu_viscous="16"/>
+  </joint>
+  <link name="diana3_link8"/>
+  <joint name="diana3_joint8" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="diana3_link7"/>
+    <child link="diana3_link8"/>
+  </joint>
+  <joint name="diana3_hand_joint" type="fixed">
+		<parent link="diana3_link8"/>
+		<child link="diana3_hand"/>
+		<origin rpy="0 0 -0.7853981633974483" xyz="0 0 0"/>
+	</joint>
+	<link name="diana3_hand">
+		<visual>
+			<geometry>
+				<mesh filename="package://diana_description/meshes/visual/hand.dae"/>
+			</geometry>
+		</visual>
+		<collision>
+			<origin rpy="0 1.5707963267948966 1.5707963267948966" xyz="0 0 0.04"/>
+			<geometry>
+				<cylinder length="0.1" radius="0.07"/>
+			</geometry>
+		</collision>
+		<collision>
+			<origin rpy="0 0 0" xyz="0 -0.05 0.04"/>
+			<geometry>
+				<sphere radius="0.07"/>
+			</geometry>
+		</collision>
+		<collision>
+			<origin rpy="0 0 0" xyz="0 0.05 0.04"/>
+			<geometry>
+				<sphere radius="0.07"/>
+			</geometry>
+		</collision>
+		<collision>
+			<origin rpy="0 1.5707963267948966 1.5707963267948966" xyz="0 0 0.1"/>
+			<geometry>
+				<cylinder length="0.1" radius="0.05"/>
+			</geometry>
+		</collision>
+		<collision>
+			<origin rpy="0 0 0" xyz="0 -0.05 0.1"/>
+			<geometry>
+				<sphere radius="0.05"/>
+			</geometry>
+		</collision>
+		<collision>
+			<origin rpy="0 0 0" xyz="0 0.05 0.1"/>
+			<geometry>
+				<sphere radius="0.05"/>
+			</geometry>
+		</collision>
+	</link>
+	<!-- Define the hand_tcp frame -->
+	<link name="diana3_hand_tcp"/>
+	<joint name="diana3_hand_tcp_joint" type="fixed">
+		<origin rpy="0 0 0" xyz="0 0 0.1034"/>
+		<parent link="diana3_hand"/>
+		<child link="diana3_hand_tcp"/>
+	</joint>
+	<link name="diana3_leftfinger">
+		<visual>
+			<geometry>
+				<mesh filename="package://diana_description/meshes/visual/finger.dae"/>
+			</geometry>
+		</visual>
+	</link>
+	<link name="diana3_rightfinger">
+		<visual>
+			<origin rpy="0 0 3.141592653589793" xyz="0 0 0"/>
+			<geometry>
+				<mesh filename="package://diana_description/meshes/visual/finger.dae"/>
+			</geometry>
+		</visual>
+	</link>
+	<joint name="diana3_finger_joint1" type="prismatic">
+		<parent link="diana3_hand"/>
+		<child link="diana3_leftfinger"/>
+		<origin rpy="0 0 0" xyz="0 0 0.0584"/>
+		<axis xyz="0 1 0"/>
+		<limit effort="20" lower="0.0" upper="0.04" velocity="0.2"/>
+	</joint>
+	<joint name="diana3_finger_joint2" type="prismatic">
+		<parent link="diana3_hand"/>
+		<child link="diana3_rightfinger"/>
+		<origin rpy="0 0 0" xyz="0 0 0.0584"/>
+		<axis xyz="0 -1 0"/>
+		<limit effort="20" lower="0.0" upper="0.04" velocity="0.2"/>
+		<mimic joint="diana3_finger_joint1"/>
+	</joint>
+  <ros2_control is_async="False" name="DianaHardwareInterface" type="system">
+    <hardware>
+      <param name="version">1.1.0</param>
+      <param name="robot_type">diana3</param>
+      <param name="prefix"></param>
+      <plugin>diana_hardware/DianaHardwareInterface</plugin>
+      <param name="robot_ip"></param>
+      <param name="arm_prefix"></param>
+    </hardware>
+    <joint name="diana3_joint1">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <command_interface name="effort"/>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="diana3_joint2">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <command_interface name="effort"/>
+      <state_interface name="position">
+        <param name="initial_value">-0.7853981633974483</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="diana3_joint3">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <command_interface name="effort"/>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="diana3_joint4">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <command_interface name="effort"/>
+      <state_interface name="position">
+        <param name="initial_value">2.356194490192345</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="diana3_joint5">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <command_interface name="effort"/>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="diana3_joint6">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <command_interface name="effort"/>
+      <state_interface name="position">
+        <param name="initial_value">1.5707963267948966</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="diana3_joint7">
+      <command_interface name="position"/>
+      <command_interface name="velocity"/>
+      <command_interface name="effort"/>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <gpio name="vx">
+      <command_interface name="cartesian_velocity"/>
+      <param name="index">0</param>
+    </gpio>
+    <gpio name="vy">
+      <command_interface name="cartesian_velocity"/>
+      <param name="index">1</param>
+    </gpio>
+    <gpio name="vz">
+      <command_interface name="cartesian_velocity"/>
+      <param name="index">2</param>
+    </gpio>
+    <gpio name="wx">
+      <command_interface name="cartesian_velocity"/>
+      <param name="index">3</param>
+    </gpio>
+    <gpio name="wy">
+      <command_interface name="cartesian_velocity"/>
+      <param name="index">4</param>
+    </gpio>
+    <gpio name="wz">
+      <command_interface name="cartesian_velocity"/>
+      <param name="index">5</param>
+    </gpio>
+    <gpio name="joint_3_position">
+      <command_interface name="elbow_command"/>
+      <param name="index">0</param>
+    </gpio>
+    <gpio name="joint_4_sign">
+      <command_interface name="elbow_command"/>
+      <param name="index">1</param>
+    </gpio>
+    <gpio name="0">
+      <command_interface name="cartesian_pose_command"/>
+      <param name="index">0</param>
+    </gpio>
+    <gpio name="1">
+      <command_interface name="cartesian_pose_command"/>
+      <param name="index">1</param>
+    </gpio>
+    <gpio name="2">
+      <command_interface name="cartesian_pose_command"/>
+      <param name="index">2</param>
+    </gpio>
+    <gpio name="3">
+      <command_interface name="cartesian_pose_command"/>
+      <param name="index">3</param>
+    </gpio>
+    <gpio name="4">
+      <command_interface name="cartesian_pose_command"/>
+      <param name="index">4</param>
+    </gpio>
+    <gpio name="5">
+      <command_interface name="cartesian_pose_command"/>
+      <param name="index">5</param>
+    </gpio>
+    <gpio name="6">
+      <command_interface name="cartesian_pose_command"/>
+      <param name="index">6</param>
+    </gpio>
+    <gpio name="7">
+      <command_interface name="cartesian_pose_command"/>
+      <param name="index">7</param>
+    </gpio>
+    <gpio name="8">
+      <command_interface name="cartesian_pose_command"/>
+      <param name="index">8</param>
+    </gpio>
+    <gpio name="9">
+      <command_interface name="cartesian_pose_command"/>
+      <param name="index">9</param>
+    </gpio>
+    <gpio name="10">
+      <command_interface name="cartesian_pose_command"/>
+      <param name="index">10</param>
+    </gpio>
+    <gpio name="11">
+      <command_interface name="cartesian_pose_command"/>
+      <param name="index">11</param>
+    </gpio>
+    <gpio name="12">
+      <command_interface name="cartesian_pose_command"/>
+      <param name="index">12</param>
+    </gpio>
+    <gpio name="13">
+      <command_interface name="cartesian_pose_command"/>
+      <param name="index">13</param>
+    </gpio>
+    <gpio name="14">
+      <command_interface name="cartesian_pose_command"/>
+      <param name="index">14</param>
+    </gpio>
+    <gpio name="15">
+      <command_interface name="cartesian_pose_command"/>
+      <param name="index">15</param>
+    </gpio>
+    <sensor name="diana3_tcp">
+      <state_interface name="force.x"/>
+      <state_interface name="force.y"/>
+      <state_interface name="force.z"/>
+      <state_interface name="torque.x"/>
+      <state_interface name="torque.y"/>
+      <state_interface name="torque.z"/>
+    </sensor>
+  </ros2_control>
+</robot>

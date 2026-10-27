@@ -1,0 +1,9 @@
+repositories:
+  diana_libfranka_overlay:
+    type: git
+    url: https://github.com/AgileRobots-APAC/diana_libfranka_overlay.git
+    version: v1.0.0-libfranka0.18.2-diana3
+  diana_description:
+    type: git
+    url: https://github.com/AgileRobots-APAC/diana_description.git
+    version: 0.1.0

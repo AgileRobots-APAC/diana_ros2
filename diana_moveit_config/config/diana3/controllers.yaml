@@ -1,0 +1,15 @@
+controller_names:
+  - diana3_arm_controller
+
+diana3_arm_controller:
+  action_ns: follow_joint_trajectory
+  type: FollowJointTrajectory
+  default: true
+  joints:
+    - diana3_joint1
+    - diana3_joint2
+    - diana3_joint3
+    - diana3_joint4
+    - diana3_joint5
+    - diana3_joint6
+    - diana3_joint7

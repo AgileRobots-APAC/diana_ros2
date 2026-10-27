@@ -1,0 +1,9 @@
+<library path="diana_robot_state_broadcaster">
+  <class name="diana_robot_state_broadcaster/DianaRobotStateBroadcaster"
+         type="diana_robot_state_broadcaster::DianaRobotStateBroadcaster"
+         base_class_type="controller_interface::ControllerInterface">
+  <description>
+    The diana state broadcaster publishes the full states of Diana series robots from ros2_control system.
+  </description>
+  </class>
+</library>

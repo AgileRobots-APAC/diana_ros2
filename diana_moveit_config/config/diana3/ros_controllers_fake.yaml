@@ -1,0 +1,34 @@
+/**:
+  controller_manager:
+    ros__parameters:
+      update_rate: 1000  # Hz
+
+      diana3_arm_controller:
+        type: joint_trajectory_controller/JointTrajectoryController
+
+      joint_state_broadcaster:
+        type: joint_state_broadcaster/JointStateBroadcaster
+
+      diana_robot_state_broadcaster:
+        type: diana_robot_state_broadcaster/DianaRobotStateBroadcaster
+        robot_type: "diana3"
+
+/**:
+  diana3_arm_controller:
+    ros__parameters:
+      # Fake mode uses mock_components/GenericSystem, which mirrors the written
+      # command into the matching state interface. Position commands therefore
+      # make the simulated arm move; effort commands would not (no dynamics).
+      command_interfaces:
+        - position
+      state_interfaces:
+        - position
+        - velocity
+      joints:
+        - diana3_joint1
+        - diana3_joint2
+        - diana3_joint3
+        - diana3_joint4
+        - diana3_joint5
+        - diana3_joint6
+        - diana3_joint7

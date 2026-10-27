@@ -1,0 +1,75 @@
+<library path="diana_example_controllers">
+    <class name="diana_example_controllers/GravityCompensationExampleController"
+           type="diana_example_controllers::GravityCompensationExampleController" base_class_type="controller_interface::ControllerInterface">
+        <description>
+            The gravity compensation controller only sends zero torques so that the robot does gravity compensation
+        </description>
+    </class>
+    <class name="diana_example_controllers/JointImpedanceExampleController"
+           type="diana_example_controllers::JointImpedanceExampleController" base_class_type="controller_interface::ControllerInterface">
+        <description>
+            The joint impedance example controller moves joint 4 and 5 in a very compliant periodic movement.
+        </description>
+    </class>
+    <class name="diana_example_controllers/JointVelocityExampleController"
+           type="diana_example_controllers::JointVelocityExampleController" base_class_type="controller_interface::ControllerInterface">
+        <description>
+            The joint velocity example controller moves joint 4 and 5 in a periodic movement.
+        </description>
+    </class>
+    <class name="diana_example_controllers/JointPositionExampleController"
+           type="diana_example_controllers::JointPositionExampleController" base_class_type="controller_interface::ControllerInterface">
+        <description>
+            The joint position example controller moves in a periodic movement.
+        </description>
+    </class>
+    <class name="diana_example_controllers/CartesianVelocityExampleController"
+           type="diana_example_controllers::CartesianVelocityExampleController" base_class_type="controller_interface::ControllerInterface">
+        <description>
+            The cartesian velocity example controller commands linear velocity with x and z components.
+        </description>
+    </class>
+    <class name="diana_example_controllers/CartesianPoseExampleController"
+           type="diana_example_controllers::CartesianPoseExampleController" base_class_type="controller_interface::ControllerInterface">
+        <description>
+            The cartesian pose example controller commands to translation on x and z components.
+        </description>
+    </class>
+    <class name="diana_example_controllers/JointImpedanceWithIKExampleController"
+        type="diana_example_controllers::JointImpedanceWithIKExampleController" base_class_type="controller_interface::ControllerInterface">
+        <description>
+            The joint impedance using inverse kinematics from moveit-OrocosKDL(LMA-ik) and commands torques based on joint impedance control law.
+        </description>
+    </class>
+    <class name="diana_example_controllers/CartesianElbowExampleController"
+           type="diana_example_controllers::CartesianElbowExampleController" base_class_type="controller_interface::ControllerInterface">
+        <description>
+            The cartesian pose example controller commands the elbow with the same initial pose configuration.
+        </description>
+    </class>
+    <class name="diana_example_controllers/CartesianOrientationExampleController"
+           type="diana_example_controllers::CartesianOrientationExampleController" base_class_type="controller_interface::ControllerInterface">
+        <description>
+            The cartesian orientation example controller commands to rotation around x axis.
+        </description>
+    </class>
+    <class name="diana_example_controllers/ElbowExampleController"
+           type="diana_example_controllers::ElbowExampleController" base_class_type="controller_interface::ControllerInterface">
+        <description>
+            The elbow example controller commands elbow position with zero cartesian velocity. Nullspace of the robot is actuated.
+        </description>
+    </class>
+    <class name="diana_example_controllers/MoveToStartExampleController"
+           type="diana_example_controllers::MoveToStartExampleController" base_class_type="controller_interface::ControllerInterface">
+        <description>
+            The move to start example controller moves a Diana3, Diana7 or Diana7G2 robot into its default pose.
+        </description>
+    </class>
+    <class name="diana_example_controllers/ModelExampleController"
+           type="diana_example_controllers::ModelExampleController" base_class_type="controller_interface::ControllerInterface">
+        <description>
+            The diana model example controller evaluates and prints the dynamic model of Diana series robots.
+        </description>
+    </class>
+
+</library>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>diana_ros2</name>
+  <version>2.5.0</version>
+  <description>Meta package of diana_ros2</description>
+  <maintainer email="service.apac@agile-robots.com">Agile Robots SE</maintainer>
+  <license>Apache 2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>diana_bringup</depend>
+  <depend>diana_description</depend>
+  <depend>diana_example_controllers</depend>
+  <depend>diana_moveit_config</depend>
+  <exec_depend>diana_gazebo_bringup</exec_depend>
+  <exec_depend>diana_gazebo_hardware</exec_depend>
+  <depend>gz_ros2_control</depend>
+  <depend>diana_hardware</depend>
+  <depend>diana_msgs</depend>
+  <depend>libfranka</depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

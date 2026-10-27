@@ -1,0 +1,15 @@
+controller_names:
+  - diana7g2_arm_controller
+
+diana7g2_arm_controller:
+  action_ns: follow_joint_trajectory
+  type: FollowJointTrajectory
+  default: true
+  joints:
+    - diana7g2_joint1
+    - diana7g2_joint2
+    - diana7g2_joint3
+    - diana7g2_joint4
+    - diana7g2_joint5
+    - diana7g2_joint6
+    - diana7g2_joint7

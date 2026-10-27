@@ -1,0 +1,10 @@
+<library path="diana_gz_hardware_plugins">
+  <class
+    name="diana_gazebo_hardware/DianaGazeboHardwareInterface"
+    type="diana_gazebo_hardware::DianaGazeboHardwareInterface"
+    base_class_type="gz_ros2_control::GazeboSimSystemInterface">
+    <description>
+      Gazebo ros2_control hardware component that adds model-based gravity compensation for effort-controlled Diana joints and exports the robot model, full diana::RobotState, and tcp force/torque (external wrench) interfaces in simulation.
+    </description>
+  </class>
+</library>

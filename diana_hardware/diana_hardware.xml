@@ -1,0 +1,10 @@
+<library path="diana_hardware">
+    <class name="diana_hardware/DianaHardwareInterface"
+           type="diana_hardware::DianaHardwareInterface"
+           base_class_type="hardware_interface::SystemInterface">
+
+        <description>
+            Hardware interface for Diana series robots
+        </description>
+    </class>
+</library>
